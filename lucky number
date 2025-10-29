@@ -1,0 +1,28 @@
+n= int(input())
+ 
+def lucky(n):
+    while n>0:
+        a=n%10
+        
+        if a==4 or a==7:
+            n=n//10
+            continue
+        else:
+            return False 
+            break
+    return True
+if lucky(n):
+    print("YES")
+else:
+    for i in range (1,n+1):
+        y=lucky(i)
+        if y!=False: 
+            if n%i==0:
+                print("YES")
+                z=True
+                break
+        else:
+            z=False
+    if z==False:
+
+        print("NO")
